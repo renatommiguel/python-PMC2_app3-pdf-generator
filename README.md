@@ -50,20 +50,4 @@ for index, row in df.iterrows():
 
 pdf.output(r'output_with_lines.pdf')
 
-
-if __name__ == '__main__':
-    pass
-line_inc = 10
-begin_title_page = 21
-end_title_page = 260
-begin_normal_page = 11
-end_normal_page = 272
-counter = 0
-for index, row in df.iterrows():
-    pdf.add_page()
-    counter += 1
-    # header
-    pdf.set_font(family='Times', size=24)
-    pdf.set_text_color(100, 100, 100)
-    pdf.cell(w=0, h=12, txt=row['Topic'], align='L', ln=1)
 ```
